@@ -7,7 +7,7 @@ app = Flask(__name__)
 with open('random_forest_model.pkl', 'rb') as model:
     live_model_pred = pickle.load(model)
 
-@app.route('/predict', methods=['POST'])
+@app.route('/', methods=['POST'])
 def predict():
     try:
         # data = request.json
