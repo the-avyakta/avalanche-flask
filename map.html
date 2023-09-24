@@ -17,7 +17,7 @@
     <div id="map" style="width: 800px; height: 600px;"></div>
 
     <script>
-        var map = L.map('map').setView([userLat, userLng], 13);
+       
 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 
@@ -26,7 +26,7 @@
             navigator.geolocation.getCurrentPosition(function (position) {
                 var userLat = position.coords.latitude;
                 var userLng = position.coords.longitude;
-
+ var map = L.map('map').setView([userLat, userLng], 13);
                 var userMarker = L.marker([userLat, userLng]).addTo(map);
 
                 userMarker.bindLabel('you are at save location', { noHide: true }).showLabel(); 
