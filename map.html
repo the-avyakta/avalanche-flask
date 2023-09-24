@@ -26,7 +26,7 @@
             navigator.geolocation.getCurrentPosition(function (position) {
                 var userLat = position.coords.latitude;
                 var userLng = position.coords.longitude;
- var map = L.map('map').setView([userLat, userLng], 13);
+ var map = L.map('map').setView([28.7213,77.1418], 13);
                 var userMarker = L.marker([userLat, userLng]).addTo(map);
 
                 userMarker.bindLabel('you are at save location', { noHide: true }).showLabel(); 
